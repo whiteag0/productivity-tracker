@@ -626,11 +626,11 @@ const ProductivityTracker = () => {
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-              <img 
-  src="/images/logo.png"
-  alt="Epic Colorado Adventures Logo"
-  className="h-20 w-auto object-contain"
-/>
+                <img 
+                  src="/images/logo.png"
+                  alt="Epic Colorado Adventures Logo"
+                  className="h-20 w-auto object-contain"
+                />
                 <CardTitle className="text-2xl font-bold text-center">
                   Register New Account
                 </CardTitle>
@@ -640,34 +640,31 @@ const ProductivityTracker = () => {
               <form onSubmit={handleRegister} className="space-y-4">
                 <Input
                   type="text"
-                  name="name"
                   placeholder="Full Name"
                   value={registerForm.name}
-                  onChange={e => setRegisterForm({...registerForm, name: e.target.value})}
+                  onChange={e => setRegisterForm(prev => ({...prev, name: e.target.value}))}
                   className="w-full"
                   required
                 />
                 <Input
                   type="email"
-                  name="email"
                   placeholder="Email"
                   value={registerForm.email}
-                  onChange={e => setRegisterForm({...registerForm, email: e.target.value})}
+                  onChange={e => setRegisterForm(prev => ({...prev, email: e.target.value}))}
                   className="w-full"
                   required
                 />
                 <Input
                   type="password"
-                  name="password"
                   placeholder="Password"
                   value={registerForm.password}
-                  onChange={e => setRegisterForm({...registerForm, password: e.target.value})}
+                  onChange={e => setRegisterForm(prev => ({...prev, password: e.target.value}))}
                   className="w-full"
                   required
                 />
                 <select
                   value={registerForm.role}
-                  onChange={e => setRegisterForm({...registerForm, role: e.target.value as 'employee' | 'supervisor'})}
+                  onChange={e => setRegisterForm(prev => ({...prev, role: e.target.value as 'employee' | 'supervisor'}))}
                   className="w-full p-2 border rounded-md"
                   required
                 >
@@ -691,18 +688,18 @@ const ProductivityTracker = () => {
         </div>
       );
     }
-
+  
     if (showForgotPassword) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-              <img 
-  src="/images/logo.png"
-  alt="Epic Colorado Adventures Logo"
-  className="h-20 w-auto object-contain"
-/>
+                <img 
+                  src="/images/logo.png"
+                  alt="Epic Colorado Adventures Logo"
+                  className="h-20 w-auto object-contain"
+                />
                 <CardTitle className="text-2xl font-bold text-center">
                   Reset Password
                 </CardTitle>
@@ -735,17 +732,18 @@ const ProductivityTracker = () => {
         </div>
       );
     }
-
+  
+    // Main login form - now directly in render
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <Card className="w-96">
           <CardHeader>
             <div className="flex flex-col items-center space-y-4">
-            <img 
-  src="/images/logo.png"
-  alt="Epic Colorado Adventures Logo"
-  className="h-20 w-auto object-contain"
-/>
+              <img 
+                src="/images/logo.png"
+                alt="Epic Colorado Adventures Logo"
+                className="h-20 w-auto object-contain"
+              />
               <CardTitle className="text-2xl font-bold text-center">
                 Employee Productivity Tracker
               </CardTitle>
