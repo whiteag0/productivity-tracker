@@ -114,11 +114,15 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-                <image
-                  src="/images/logo.png"
-                  alt="Epic Colorado Adventures Logo"
-                  className="h-20 w-auto object-contain"
+              <div className="relative h-20 w-40">
+            <Image 
+                 src="/images/logo.png"
+                 alt="Epic Colorado Adventures Logo"
+                  fill
+                 className="object-contain"
+                 priority
                 />
+            </div>
                 <CardTitle className="text-2xl font-bold text-center">
                   Register New Account
                 </CardTitle>
@@ -183,11 +187,15 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-                <image
+              <div className="relative h-20 w-40">
+                <Image 
                   src="/images/logo.png"
-                  alt="Epic Colorado Adventures Logo"
-                  className="h-20 w-auto object-contain"
-                />
+                 alt="Epic Colorado Adventures Logo"
+                 fill
+                 className="object-contain"
+                 priority
+             />
+        </div>
                 <CardTitle className="text-2xl font-bold text-center">
                   Reset Password
                 </CardTitle>
@@ -226,11 +234,15 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
         <Card className="w-96">
           <CardHeader>
             <div className="flex flex-col items-center space-y-4">
-              <image
-                src="/images/logo.png"
-                alt="Epic Colorado Adventures Logo"
-                className="h-20 w-auto object-contain"
-              />
+            <div className="relative h-20 w-40">
+            <Image 
+             src="/images/logo.png"
+             alt="Epic Colorado Adventures Logo"
+             fill
+             className="object-contain"
+             priority
+            />
+        </div>
               <CardTitle className="text-2xl font-bold text-center">
                 Employee Productivity Tracker
               </CardTitle>
@@ -953,11 +965,15 @@ SupervisorView.displayName = 'SupervisorView'
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex items-center space-x-4">
-                <image
-                   src="/images/logo.png"
-                   alt="Epic Colorado Adventures Logo"
-                  className="h-20 w-auto object-contain"
+              <div className="relative h-20 w-40">
+              <Image 
+                src="/images/logo.png"
+                alt="Epic Colorado Adventures Logo"
+                 fill
+                 className="object-contain"
+                 priority
                 />
+            </div>
                 <span className="text-xl font-bold">Productivity Tracker</span>
               </div>
               <div className="flex items-center space-x-4">
