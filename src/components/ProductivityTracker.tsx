@@ -11,6 +11,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   PieChart, Pie, Cell
 } from 'recharts'
+import Image from 'next/image'
 
 interface Task {
   id: number
@@ -113,7 +114,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-                <img 
+                <image
                   src="/images/logo.png"
                   alt="Epic Colorado Adventures Logo"
                   className="h-20 w-auto object-contain"
@@ -182,7 +183,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
           <Card className="w-96">
             <CardHeader>
               <div className="flex flex-col items-center space-y-4">
-                <img 
+                <image
                   src="/images/logo.png"
                   alt="Epic Colorado Adventures Logo"
                   className="h-20 w-auto object-contain"
@@ -225,7 +226,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
         <Card className="w-96">
           <CardHeader>
             <div className="flex flex-col items-center space-y-4">
-              <img 
+              <image
                 src="/images/logo.png"
                 alt="Epic Colorado Adventures Logo"
                 className="h-20 w-auto object-contain"
@@ -299,6 +300,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
       </div>
     )
   })
+LoginScreen.displayName = 'LoginScreen'
 
   const EmployeeView: React.FC<EmployeeViewProps> = React.memo(({ 
     startDate,
@@ -466,6 +468,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
       </Card>
     </div>
   ))
+  EmployeeView.displayName = 'EmployeeView'
 
   const SupervisorView: React.FC<SupervisorViewProps> = React.memo(({ 
     users,
@@ -693,6 +696,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
     </div>
   )
 })
+SupervisorView.displayName = 'SupervisorView' 
   
   const ProductivityTracker: React.FC = () => {
     // State declarations
@@ -949,7 +953,7 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex items-center space-x-4">
-                <img 
+                <image
                    src="/images/logo.png"
                    alt="Epic Colorado Adventures Logo"
                   className="h-20 w-auto object-contain"
@@ -1008,5 +1012,6 @@ const LoginScreen: React.FC<LoginScreenProps> = React.memo(({
       </div>
     )
   }
+  ProductivityTracker.displayName = 'ProductivityTracker'
   
   export default ProductivityTracker
